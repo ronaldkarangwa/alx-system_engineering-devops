@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# indefinately writes "I am alive" to the file
+# /tmp/my_process
+
+fpath="/tmp/my_process"
+echo $$ > /tmp/my_process
+while true;
+do
+  echo "I am alive!"
+  sleep 2
+done
