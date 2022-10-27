@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-# indefinately writes "I am alive" to the file
-# /tmp/my_process
+# Indefinitely writes "I am alive!" to a file
 
-fpath="/tmp/my_process"
-echo $$ > /tmp/my_process
-while true;
-do
-  echo "I am alive!"
-  sleep 2
+NAME=/tmp/my_process
+sudo touch $NAME
+
+while true; do
+    sudo bash -c "echo \"I am alive!\" >> $NAME"
+    sleep 2
 done
